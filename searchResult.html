@@ -3,38 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>查詢結果</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
         table{
             text-align: center;
-            border: brown solid 2px;
-            width: 50%;
+            width: 65%;
             margin: 2px auto 2px;
+            font-size: 22px;
+        }
+
+        th, td{
+            padding: 25px 5px;
+            text-align: center;
+            border: none;
+            border-bottom: brown solid 2px;
+        }
+
+        .content{
+            margin: 50px 0 50px;
         }
     </style>
 </head>
 <body>
-    <p style="text-align: center; font-size: 16px; color: brown;">查詢結果</p>
-    <table border="1">
-        <tr>
-            <td>開課代碼</td>
-            <td>主開代碼</td>
-            <td>中文科目名稱</td>
-            <td>英文科目名稱</td>
-            <td>週別</td>
-            <td>學分</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tbody>
+    <div class="header">
+        <h1 class="header-title"><img src="img/logo.gif" alt="" class="logo">&nbsp;輔仁大學跨校選課申請系統</h1>
+    </div>
+    <hr>
+    <div class="content">
+        <p style="text-align: center; font-size: 25px; color: brown;"><b>查詢結果</b></p>
+        <table>
             <tr>
-                <td>G-3961-25112-心理學系碩士班</td>
+                <td>開課代碼</td>
+                <td>主開代碼</td>
+                <td>中文科目名稱</td>
+                <td>英文科目名稱</td>
+                <td>週別</td>
+                <td>學分</td>
                 <td>&nbsp;</td>
-                <td>生命書寫實務</td>
-                <td>Practice Life Writing</td>
-                <td>S</td>
-                <td>3</td>
-                <td><a href="agreeTable.html"><button type="submit">新增選課</button></a></td>
             </tr>
-        </tbody>
-    </table>
+            <tbody>
+                <tr>
+                    <td>G-3961-25112-心理學系碩士班</td>
+                    <td>&nbsp;</td>
+                    <td>生命書寫實務</td>
+                    <td>Practice Life Writing</td>
+                    <td>S</td>
+                    <td>3</td>
+                    <td><a href="agreeTable.html"><button type="submit">新增選課</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class="footer">
+        <p class="footer-title">2018 &copy; Fu Jen Catholic University</p>
+    </div>
 </body>
 </html>

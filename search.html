@@ -3,62 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>查詢</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reg-style.css">
     <style>
-        table.mainTable{
-            font-size: 16px;
-            border: aqua solid 5px;
-            border-collapse: collapse;
-            width: 60%;
-            margin: 5px auto 5px;
-        }
-
-        table.mainTable .mainContent{
-            height: 60%;
-        }
-
-        table.innerTable{
-            width: 80%;
-            margin: 0 auto 0;
-        }
-
-        table.innerTable th{
-            background-color: aquamarine;
+        body{
+            font-family: "微軟正黑體";
         }
 
         table.searchTable{
             width: 80%;
-            margin: 0 auto 0;
-            border: darksalmon solid 2px;
+            margin: 0 auto 20px;
         }
 
         table.searchTable th{
+            font-size: 20px;
+            padding: 20px 0;
             background-color: lightpink;
+            border: none;
+            border-radius: 5px;
         }
 
-        th, td{
-            border: aqua solid 1px;
-            padding: 5px;
-        }
-
-        .required{
-            color: red;
-        }
-
-        .atLeastOne{
-            color: blue;
+        table.searchTable td{
+            padding: 15px;
         }
     </style>
 </head>
 <body>
-<hr>
-<table class="mainTable">
+    <div class="header">
+        <h1 class="header-title"><img src="img/logo.gif" alt="" class="logo">&nbsp;輔仁大學跨校選課申請系統</h1>
+    </div>
+    <hr>
+    <div class="content">
+    <table class="mainTable">
     <tr>
-        <td><p style="text-align: center">輔仁大學跨校選課系統</p></td>
+        <td><p style="text-align: center; font-size: 26px;">輔仁大學跨校選課申請表單</p></td>
     </tr>
     <tr>
         <td class="mainContent">
             <form action="" method="post">
-                <table class="innerTable" border="1">
+                <table class="innerTable">
                     <tr>
                         <th colspan="2">1.學生基本資料</th>
                     </tr>
@@ -107,7 +90,9 @@
                 &nbsp;<br />
                 <p style="text-align: center;"><span class="required">※您可以於上方表格中修改基本資料！</span></p>
                 <br>
-                <button type="submit" style="margin: 1px auto 1px auto;">送出修改基本資料</button>
+                <div style="float: right; margin: 0 100px 0 0;">
+                    <button type="submit" class="btn">送出修改基本資料</button>
+                </div>
                 &nbsp;<br /><br />
                 <p style="text-align: center;"><span class="required">*為必填</span><span class="atLeastOne">*至少填一個</span></p>
             </form>
@@ -115,21 +100,25 @@
     </tr>
     <tr>
         <td>
-            <table border="1" class="searchTable">
+            <table class="searchTable">
                 <tr>
                     <th colspan="2">新增選課資料</th>
                 </tr>
                 <tr>
-                    <td>[<a href="#">查詢開課代碼</a>]</td>
+                    <td style="width: 42%;">[<a href="#">查詢開課代碼</a>]</td>
                     <td><b>輸入開課代碼:</b><form style="display: inline" action="searchResult.html" method="post">
                         <input type="text" name="classId">
-                        <button type="submit">確定</button>
+                        <button type="submit" class="btn-search">確定</button>
                     </form></td>
                 </tr>
             </table>
         </td>
     </tr>
-</table>
-<hr>
+    </table>
+    </div>
+    <hr>
+    <div class="footer">
+        <p class="footer-title">2018 &copy; Fu Jen Catholic University</p>
+    </div>
 </body>
 </html>
