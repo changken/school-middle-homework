@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查詢</title>
+    <style>
+        table.mainTable{
+            font-size: 16px;
+            border: aqua solid 5px;
+            border-collapse: collapse;
+            width: 60%;
+            margin: 5px auto 5px;
+        }
+
+        table.mainTable .mainContent{
+            height: 60%;
+        }
+
+        table.innerTable{
+            width: 80%;
+            margin: 0 auto 0;
+        }
+
+        table.innerTable th{
+            background-color: aquamarine;
+        }
+
+        table.searchTable{
+            width: 80%;
+            margin: 0 auto 0;
+            border: darksalmon solid 2px;
+        }
+
+        table.searchTable th{
+            background-color: lightpink;
+        }
+
+        th, td{
+            border: aqua solid 1px;
+            padding: 5px;
+        }
+
+        .required{
+            color: red;
+        }
+
+        .atLeastOne{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<hr>
+<table class="mainTable">
+    <tr>
+        <td><p style="text-align: center">輔仁大學跨校選課系統</p></td>
+    </tr>
+    <tr>
+        <td class="mainContent">
+            <form action="" method="post">
+                <table class="innerTable" border="1">
+                    <tr>
+                        <th colspan="2">1.學生基本資料</th>
+                    </tr>
+                    <tr>
+                        <td><span class="required">*</span>姓名:<input type="text" name="uname">
+                            <span class="required">*</span>性別:
+                            <select name="gender">
+                                <option value="male">男</option>
+                                <option value="female">女</option>
+                            </select></td>
+                        <td><span class="required">*</span>就讀學校:
+                            <select name="school">
+                                <option value="ntu">台灣大學</option>
+                                <option value="nctu">交通大學</option>
+                                <option value="">清華大學</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><span class="required">*</span>學系:<input type="text" name="department"><span style="color: red;">(請填入系所全名)</span></td>
+                        <td>系分組:<input type="text" name="group"><span class="required">*</span>年級:<select name="grade">
+                            <option value="1">一</option>
+                            <option value="2">二</option>
+                            <option value="3">三</option>
+                            <option value="4">四</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td><span class="required">*</span>學號:<input type="text" name="schoolId"></td>
+                        <td><span class="required">*</span>身份證字號(居留證字號):<input type="text" name="yourId"></td>
+                    </tr>
+                    <tr>
+                        <td><span class="atLeastOne">*</span>行動電話:<input type="text" name="phoneNumber"></td>
+                        <td><span class="atLeastOne">*</span>聯絡電話:<input type="text" name="telNumber"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><span class="required">*</span>聯絡地址:郵遞區號:<input type="text" name="zip" style="width: 10%;">
+                            地址:<input type="text" name="address" style="width: 60%;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><span class="required">*</span>電子郵件信箱:<input type="text" name="email" style="width: 60%;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">選課學期:<input type="text" name="year"></td>
+                    </tr>
+                </table>
+                &nbsp;<br />
+                <p style="text-align: center;"><span class="required">※您可以於上方表格中修改基本資料！</span></p>
+                <br>
+                <button type="submit" style="margin: 1px auto 1px auto;">送出修改基本資料</button>
+                &nbsp;<br /><br />
+                <p style="text-align: center;"><span class="required">*為必填</span><span class="atLeastOne">*至少填一個</span></p>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="1" class="searchTable">
+                <tr>
+                    <th colspan="2">新增選課資料</th>
+                </tr>
+                <tr>
+                    <td>[<a href="#">查詢開課代碼</a>]</td>
+                    <td><b>輸入開課代碼:</b><form style="display: inline" action="searchResult.html" method="post">
+                        <input type="text" name="classId">
+                        <button type="submit">確定</button>
+                    </form></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<hr>
+</body>
+</html>

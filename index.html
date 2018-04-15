@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登入</title>
+    <style>
+        .loginform{
+            margin: 5px 300px 5px;
+            width: auto;
+            border-style: solid;
+            border-color: burlywood;
+            border-width: 5px;
+        }
+
+        p.page-footer a{
+            font-size: 20px;
+            text-align: center;
+            color: chocolate;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        table{
+            border: blueviolet solid 3px;
+            text-align: left;
+            margin: 25px auto 25px auto;
+            width: 36%;
+        }
+
+        th{
+            padding: 10px 1px;
+            background-color: dodgerblue;
+            color: white;
+        }
+        td{
+            padding: 10px 1px;
+        }
+    </style>
+</head>
+<body>
+    <p>登 入 修 改 資 料 <p class="adminlogin">[<a href="#">管理者登入</a>]</p><p>
+    <hr>
+        <form class="loginform" action="" method="post">
+            <table border="1">
+                <tr>
+                    <th><label for="uid">身份證字號:</label></th>
+                    <td><input type="text" name="uid" id="uid"></td>
+                </tr>
+                <tr>
+                    <th><label for="pw">密碼:</label></th>
+                    <td><input type="password" name="pw" id="pw"><a href="#">密碼查詢</a></td>
+                </tr>
+            </table>
+        </form>
+    <hr>
+    <p class="page-footer"><a href="reg.html">新增學生基本資料</a></p>
+</body>
+</html>
