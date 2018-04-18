@@ -10,6 +10,12 @@
             font-family: "微軟正黑體";
         }
     </style>
+    <script>
+        function check(){
+            alert("申請完畢!");
+            return true;
+        }
+    </script>
 </head>
 <body>
     <div class="header">
@@ -19,11 +25,11 @@
     <div class="content">
     <table class="mainTable">
         <tr>
-            <td><p style="text-align: center; font-size: 26px;">輔仁大學跨校選課申請表單</p></td>
+            <td><p style="text-align: center; font-size: 26px;">輔仁大學跨校選課註冊表單</p></td>
         </tr>
         <tr>
             <td class="mainContent">
-                <form action="search.html" method="post">
+                <form action="search.html" method="post" id="regForm">
                     <table class="innerTable">
                         <tr>
                             <th colspan="2">1.申請學生資料</th>
@@ -76,7 +82,7 @@
                         </tr>
                     </table>
                     &nbsp;<br />
-                    <div style="float: right; margin: 0 100px 0 0;"><button type="submit" class="btn">送出基本資料</button></div>
+                    <div style="float: right; margin: 0 100px 0 0;"><button type="submit" class="btn" onclick="return check();">送出基本資料</button></div>
                     &nbsp;<br /><br />
                     <p style="text-align: center;"><span class="required">*為必填</span>&nbsp;<span class="atLeastOne">*至少填一個</span></p>
                 </form>
