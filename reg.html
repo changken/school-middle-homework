@@ -1,98 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>註冊</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reg-style.css">
-    <style>
-        body{
-            font-family: "微軟正黑體";
-        }
-    </style>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>輔仁大學外校生選課系統 - 註冊</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!--custom style by teng kai-->
+    <link rel="stylesheet" href="css/custom-style.css">
     <script>
         function check(){
-            alert("申請完畢!");
-            return true;
+            var idCheck = /^[A-Z][1-2]\d{8}$/;
+            var idCheck2 = /^[A-Z][A-D]\d{9}$/;
+            var idNumber = document.forms["regForm"]["yourId"].value;
+            var phone = document.forms["regForm"]["phoneNumber"].value;
+            var tel = document.forms["regForm"]["telNumber"].value;
+            if(phone == ""&& tel == "") {//手機和電話==空
+                alert("行動電話或聯絡電話請擇一填寫！");
+                return false;
+            }else if(!(idCheck.test(idNumber) || idCheck2.test(idNumber))){
+                alert("身分證字號格式有誤！");
+                return false;
+            }else{
+                alert("申請完畢!");
+                return true;
+            }
         }
     </script>
-</head>
-<body>
-    <div class="header">
-        <h1 class="header-title"><img src="img/logo.gif" alt="" class="logo">&nbsp;輔仁大學跨校選課申請系統</h1>
-    </div>
-    <hr>
-    <div class="content">
-    <table class="mainTable">
-        <tr>
-            <td><p style="text-align: center; font-size: 26px;">輔仁大學跨校選課註冊表單</p></td>
-        </tr>
-        <tr>
-            <td class="mainContent">
-                <form action="search.html" method="post" id="regForm">
-                    <table class="innerTable">
-                        <tr>
-                            <th colspan="2">1.申請學生資料</th>
-                        </tr>
-                        <tr>
-                            <td><span class="required">*</span>姓名:<input type="text" name="uname">
-                                <span class="required">*</span>性別:
-                                <select name="gender">
-                                    <option value="male">男</option>
-                                    <option value="female">女</option>
-                                </select></td>
-                            <td><span class="required">*</span>就讀學校:
-                            <select name="school">
-                                <option value="ntu">台灣大學</option>
-                                <option value="nctu">交通大學</option>
-                                <option value="">清華大學</option>
-                            </select></td>
-                        </tr>
-                        <tr>
-                            <td><span class="required">*</span>學系:<input type="text" name="department"><span style="color: red;">(請填入系所全名)</span></td>
-                            <td>系分組:<input type="text" name="group"><span class="required">*</span>年級:<select name="grade">
-                                <option value="1">一</option>
-                                <option value="2">二</option>
-                                <option value="3">三</option>
-                                <option value="4">四</option>
-                            </select></td>
-                        </tr>
-                        <tr>
-                            <td><span class="required">*</span>學號:<input type="text" name="schoolId"></td>
-                            <td><span class="required">*</span>身份證字號(居留證字號):<input type="text" name="yourId"></td>
-                        </tr>
-                        <tr>
-                            <td><span class="atLeastOne">*</span>行動電話:<input type="text" name="phoneNumber"></td>
-                            <td><span class="atLeastOne">*</span>聯絡電話:<input type="text" name="telNumber"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><span class="required">*</span>聯絡地址:郵遞區號:<input type="text" name="zip" style="width: 10%;">
-                                地址:<input type="text" name="address" style="width: 60%;"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><span class="required">*</span>電子郵件信箱:<input type="text" name="email" style="width: 60%;"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">選課學期:<select name="year">
-                                <option value="106">一O六</option>
-                            </select>年度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第<select name="time">
-                                <option value="1">一</option>
-                                <option value="2">二</option>
-                            </select>學期</td>
-                        </tr>
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">輔仁大學外校生選課系統</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="reg.html">註冊</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="search.html">選課表單</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="masthead">
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h1 class="brand-heading">註冊</h1>
+              <p class="intro-text">所有非輔仁大學的學生，如果想要修習本校課程，需使用本系統進行選課。而在這之前，您必須先有個帳號！</p>
+              <a href="#regContent" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="regContent" class="content-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2 class="text-center display-4">輔仁大學跨校選課註冊表單</h2>
+                  <form action="search.html" method="post" id="regForm">
+                    <table class="table table-striped innerTable">
+                      <tr>
+                        <th colspan="2" class="text-center">個人資料</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group">
+                            <label for="uname"><span class="text-danger">*</span>姓名:</label>
+                            <input type="text" name="uname" id="uname" style="width: 40%;" required>
+                            <label for="gender"><span class="text-danger">*</span>性別:</label>
+                            <select name="gender" id="gender" required>
+                              <option value="male">男</option>
+                              <option value="female">女</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="form-group">
+                            <label for="school"><span class="text-danger">*</span>就讀學校:</label>
+                            <select name="school" id="school" required>
+                              <option value="ntu">台灣大學</option>
+                              <option value="nctu">交通大學</option>
+                              <option value="nthu">清華大學</option>
+                              <option value="ncku">成功大學</option>
+                              <option value="nccu">政治大學</option>
+                              <option value="dyu">大葉大學</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group">
+                            <label for="department"><span class="text-danger">*</span>學系:</label>
+                            <input type="text" name="department" id="department" required class="w-50" placeholder="請填入系所全名">
+                          </div>
+                        </td>
+                        <td>
+                          <div class="form-group">
+                            <label for="group">系分組:</label>
+                            <input type="text" name="group" id="group" style="width: 40%;">
+                            <label for="grade"><span class="text-danger">*</span>年級:</label>
+                            <select name="grade" id="grade" required>
+                              <option value="1">一</option>
+                              <option value="2">二</option>
+                              <option value="3">三</option>
+                              <option value="4">四</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group">
+                            <label for="schoolId"><span class="text-danger">*</span>學號:</label>
+                            <input type="text" name="schoolId" id="schoolId" class="w-50" required>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="form-group">
+                            <label for="yourId"><span class="text-danger">*</span>身份證字號:</label>
+                            <input type="text" name="yourId" id="yourId" class="w-50" placeholder="or居留證字號" required>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group">
+                            <label for="phoneNumber"><span class="text-info">*</span>行動電話:</label>
+                            <input type="text" name="phoneNumber" id="phoneNumber" class="w-50">
+                          </div>
+                        </td>
+                        <td>
+                          <div class="form-group">
+                            <label for="telNumber"><span class="text-info">*</span>聯絡電話:</label>
+                            <input type="text" name="telNumber" id="telNumber" class="w-50">
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <div class="form-group">
+                            <label for="zip"><span class="text-danger">*</span>郵遞區號:</label>
+                            <input type="text" name="zip" id="zip" style="width: 15%;" required>
+                            <label for="address">聯絡地址:</label>
+                            <input type="text" name="address" id="address" style="width:55%;" required>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <div class="form-group">
+                            <label for="email"><span class="text-danger">*</span>電子郵件:</label>
+                            <input type="text" name="email" id="email" class="w-50" required>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group">
+                            <label for="year">選課學期:&nbsp;</label>
+                            <select name="year" id="year">
+                              <option value="106">一O六</option>
+                            </select>年度
+                          </div>
+                        </td>
+                        <td>
+                          <div class="form-group">
+                          <label for="time">第
+                            <select name="time" id="time">
+                              <option value="1">一</option>
+                              <option value="2">二</option>
+                            </select>
+                            學期</label>
+                          </div>
+                        </td>
+                      </tr>
                     </table>
                     &nbsp;<br />
-                    <div style="float: right; margin: 0 100px 0 0;"><button type="submit" class="btn" onclick="return check();">送出基本資料</button></div>
+                    <button type="submit" class="btn btn-outline-success btn-lg" style="border-radius: 5px;" onclick="return check();">送出基本資料</button>
                     &nbsp;<br /><br />
-                    <p style="text-align: center;"><span class="required">*為必填</span>&nbsp;<span class="atLeastOne">*至少填一個</span></p>
-                </form>
-            </td>
-        </tr>
-    </table>
-    </div>
-    <hr>
-    <div class="footer">
-        <p class="footer-title">2018 &copy; Fu Jen Catholic University</p>
-    </div>
-</body>
+                    <p class="text-center"><span class="text-danger">*為必填</span>&nbsp;<span class="text-info">*至少填一個</span></p>
+                  </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <!--<section id="download" class="download-section content-section text-center">
+      <div class="container">
+        <div class="col-lg-8 mx-auto">
+          <h2>Download Grayscale</h2>
+          <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+          <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+        </div>
+      </div>
+    </section>-->
+
+    <!-- Contact Section -->
+    <!--<section id="contact" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Contact Start Bootstrap</h2>
+            <p>Feel free to leave us a comment on the
+              <a href="http://startbootstrap.com/template-overviews/grayscale/">Grayscale template overview page</a>
+              on Start Bootstrap to give some feedback about this theme!</p>
+            <ul class="list-inline banner-social-buttons">
+              <li class="list-inline-item">
+                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg">
+                  <i class="fa fa-twitter fa-fw"></i>
+                  <span class="network-name">Twitter</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/BlackrockDigital/startbootstrap" class="btn btn-default btn-lg">
+                  <i class="fa fa-github fa-fw"></i>
+                  <span class="network-name">Github</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg">
+                  <i class="fa fa-google-plus fa-fw"></i>
+                  <span class="network-name">Google+</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>-->
+
+    <!-- Map Section -->
+    <!--<div id="map"></div>-->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center">
+        <p>Copyright &copy; Fu Jen Catholic University 2018</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+
+  </body>
+
 </html>

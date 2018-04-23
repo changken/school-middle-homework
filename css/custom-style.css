@@ -1,0 +1,91 @@
+/*both of reg.html and search.html*/
+table.innerTable{
+    width: auto;
+}
+
+table.innerTable th{
+    font-size: 22px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1d9b6c;
+    padding: 40px 0;
+}
+
+table.innerTable td{
+    border: none;
+    border-bottom: grey solid 2px;
+    padding: 12px 14px;
+}
+
+input[type=text]{
+    font-size: 18px;
+    padding: 8px 10px;
+    border: #D9D9D9 solid 2px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+select {
+    font-size: 18px;
+    padding: 8px 10px;
+    border: #D9D9D9 solid 2px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/*button[type=submit].btn{
+    font-size: 20px;
+    padding: 10px 6px;
+    border: seagreen solid 2px;
+    border-radius: 5px;
+    background-color: aquamarine;
+}*/
+
+button[type=submit].btn-search{
+    color: white;
+    font-size: 19px;
+    padding: 6px 14px;
+    border: pink solid 1px;
+    border-radius: 5px;
+    background-color: hotpink;
+}
+
+/*search.html*/
+table.searchTable{
+    width: auto;
+    margin: 0 auto 0;
+}
+
+table.searchTable th{
+    font-size: 20px;
+    padding: 20px 0;
+    background-color: hotpink;
+    border: none;
+    border-radius: 5px;
+}
+
+table.searchTable td{
+    padding: 20px;
+}
+
+/*searchResult.html*/
+table.resultTable{
+    width: auto;
+    font-size: 20px;
+    margin: 0 auto 0;
+}
+
+table.resultTable th, table.resultTable td{
+    padding: 18px 10px;
+    border: none;
+    border-bottom: brown solid 2px;
+}
+
+button[type=submit].addCourse{
+    font-size: 20px;
+    padding: 10px 8px;
+    background-color: brown;
+    color: white;
+    border: rosybrown solid 3px;
+    border-radius: 6px;
+}

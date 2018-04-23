@@ -1,47 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>查詢結果</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        table{
-            text-align: center;
-            width: 65%;
-            margin: 2px auto 2px;
-            font-size: 22px;
-        }
 
-        th, td{
-            padding: 25px 5px;
-            text-align: center;
-            border: none;
-            border-bottom: brown solid 2px;
-        }
+  <head>
 
-        .content{
-            margin: 50px 0 50px;
-        }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        button[type=submit].addCourse{
-            font-size: 20px;
-            padding: 10px 8px;
-            background-color: brown;
-            color: white;
-            border: rosybrown solid 3px;
-            border-radius: 6px;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1 class="header-title"><img src="img/logo.gif" alt="" class="logo">&nbsp;輔仁大學跨校選課申請系統</h1>
-    </div>
-    <hr>
-    <div class="content">
-        <p style="text-align: center; font-size: 25px; color: brown;"><b>查詢結果</b></p>
-        <table>
-            <tr>
+    <title>輔仁大學外校生選課系統 - 查詢結果</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!--custom style by teng kai-->
+    <link rel="stylesheet" href="css/custom-style.css">
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">輔仁大學外校生選課系統</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="reg.html">註冊</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="search.html">選課表單</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="masthead">
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h1 class="brand-heading">查詢結果</h1>
+              <p class="intro-text">如果您看到您想要修習的課程的話，那就按下「新增選課」吧！</p>
+              <a href="#about" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <h2 class="text-center display-3" style="color: brown;">查詢結果</h2>
+            <table class="table resultTable">
+              <tr>
                 <td>開課代碼</td>
                 <td>主開代碼</td>
                 <td>中文科目名稱</td>
@@ -49,23 +83,92 @@
                 <td>週別</td>
                 <td>學分</td>
                 <td>新增選課</td>
-            </tr>
-            <tbody>
-                <tr>
-                    <td>G-3961-25112-心理學系碩士班</td>
-                    <td>&nbsp;</td>
-                    <td>生命書寫實務</td>
-                    <td>Practice Life Writing</td>
-                    <td>S</td>
-                    <td>3</td>
-                    <td><a href="search.html"><button type="submit" class="addCourse"><b>新增選課</b></button></a></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <hr>
-    <div class="footer">
-        <p class="footer-title">2018 &copy; Fu Jen Catholic University</p>
-    </div>
-</body>
+              </tr>
+              <tbody>
+              <tr>
+                <td>G-3961-25112-心理學系碩士班</td>
+                <td>&nbsp;</td>
+                <td>生命書寫實務</td>
+                <td>Practice Life Writing</td>
+                <td>S</td>
+                <td>3</td>
+                <td><a href="search.html"><button type="submit" class="addCourse"><b>新增選課</b></button></a></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <!--<section id="download" class="download-section content-section text-center">
+      <div class="container">
+        <div class="col-lg-8 mx-auto">
+          <h2>Download Grayscale</h2>
+          <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+          <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+        </div>
+      </div>
+    </section>-->
+
+    <!-- Contact Section -->
+    <!--<section id="contact" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Contact Start Bootstrap</h2>
+            <p>Feel free to leave us a comment on the
+              <a href="http://startbootstrap.com/template-overviews/grayscale/">Grayscale template overview page</a>
+              on Start Bootstrap to give some feedback about this theme!</p>
+            <ul class="list-inline banner-social-buttons">
+              <li class="list-inline-item">
+                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg">
+                  <i class="fa fa-twitter fa-fw"></i>
+                  <span class="network-name">Twitter</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/BlackrockDigital/startbootstrap" class="btn btn-default btn-lg">
+                  <i class="fa fa-github fa-fw"></i>
+                  <span class="network-name">Github</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg">
+                  <i class="fa fa-google-plus fa-fw"></i>
+                  <span class="network-name">Google+</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>-->
+
+    <!-- Map Section -->
+    <!--<div id="map"></div>-->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center">
+        <p>Copyright &copy; Fu Jen Catholic University 2018</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+
+  </body>
+
 </html>
