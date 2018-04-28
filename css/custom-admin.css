@@ -1,0 +1,77 @@
+/*adminPanel.html*/
+.welcome{
+    text-align: center;
+    color: white;
+}
+
+table.cpanel{
+    width: 50%;
+    margin: 10px auto;
+}
+
+table.cpanel thead tr th{
+    padding: 10px 1px;
+    background: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+table.cpanel tbody tr td{
+    border: none;
+    padding: 20px;
+}
+
+table.stuList{
+    width: auto;
+    margin: 0 auto;
+}
+
+table.stuList thead tr th{
+    border: none;
+    border-bottom: white solid 2px;
+    padding: 15px 5px;
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table.stuList tbody tr td{
+    border: none;
+    border-bottom: white solid 2px;
+    text-align: center;
+    padding: 15px 5px;
+}
+
+/*adminCheck.html*/
+table.stuInfo{
+    width: 50%;
+    margin: 1px 12% 1px;
+}
+
+table.stuInfo tr td {
+    padding: 10px 1px;
+}
+
+table.chosenClassLst{
+    width: 85%;
+    margin: 10px auto 10px;
+}
+
+table.chosenClassLst thead tr th{
+    border: black solid 2px;
+    padding: 25px 1px;
+    background-color: dodgerblue;
+    color: white;
+}
+
+table.chosenClassLst tbody tr td{
+    text-align: center;
+    border: black dashed 2px;
+    padding: 25px 1px;
+}
+
+.btn-default, .btn-default:focus, .btn-default:hover{
+    border-radius: 5px;
+}
