@@ -20,14 +20,15 @@ table.cpanel tbody tr td{
 }
 
 table.stuList{
-    width: 120%;
+    width: 100%;
     margin: 0 auto;
+    font-size: 20px;
 }
 
 table.stuList thead tr th{
     border: none;
     border-bottom: white solid 2px;
-    padding: 20px 5px;
+    padding: 22px 5px;
     background-color: dodgerblue;
     color: white;
     text-align: center;
@@ -38,7 +39,7 @@ table.stuList tbody tr td{
     border: none;
     border-bottom: white solid 2px;
     text-align: center;
-    padding: 15px 5px;
+    padding: 20px 5px;
 }
 
 /*adminCheck.html*/
@@ -64,6 +65,7 @@ table.stuInfo tbody td {
 }
 
 table.chosenClassLst{
+    font-size: 20px;
     width: 100%;
     margin: 0 auto;
 }
@@ -71,17 +73,31 @@ table.chosenClassLst{
 table.chosenClassLst thead tr th{
     border: none;
     padding: 30px 0;
-    background-color: dodgerblue;
+    background-color: #17a2b8;
     color: white;
 }
 
 table.chosenClassLst tbody tr td{
     text-align: center;
     border: none;
-    padding: 25px 1px;
+    padding: 20px 0;
+}
+
+/*override*/
+.modal-title, .modal-body td, .modal-body td{
+    color: black;
+}
+
+.modal-body table thead.table-dark th{
+    color: white;
+}
+
+.modal-body table thead th{
+    color: black;
 }
 
 .btn{
     border-radius: 5px;
 }
+
 

@@ -91,15 +91,15 @@
                                     <div class="form-group">
                                         <label for="uid"><input type="text" name="uid" id="uid" placeholder="身份證字號"></label>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">密碼查詢</button>
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-key"></i> 密碼查詢</button>
                                 </form>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a class="btn btn-default btn-lg" href="adminPanel.html">已核可/未核可學生列表</a>
-                            <a href="#" class="btn btn-danger" style="font-size: 20px;">後續加退選作業</a>
+                            <a class="btn btn-default btn-lg" href="adminPanel.html"><i class="fa fa-list-alt fa-2x"></i> 已核可/未核可學生列表</a>
+                            <a href="#" class="btn btn-danger" style="font-size: 20px;"><i class="fa fa-edit fa-2x"></i> 後續加退選作業</a>
                         </td>
                     </tr>
                     </tbody>
@@ -162,9 +162,7 @@
                             <th>電腦實習費</th>
                             <th>一般實習費</th>
                             <th>費用小計</th>
-                            <th>審查狀態</th>
-                            <th>核定</th>
-                            <th>&nbsp;</th>
+                            <th>核定作業</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -181,16 +179,7 @@
                             <td>0</td>
                             <td>0</td>
                             <td>2812</td>
-                            <td>
-                                <input type="radio" name="passStatus" value="yes">已通過<br>
-                                <input type="radio" name="passStatus" value="no">未通過
-                            </td>
-                            <td>
-                                <input type="checkbox" name="status[]" value="firstPass">初審<br>
-                                <input type="checkbox" name="status[]" value="paid">繳費<br>
-                                <input type="checkbox" name="status[]" value="check">核定
-                            </td>
-                            <td><button type="button" class="btn btn-primary">編輯</button></td>
+                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#checkCourse[0]">核定作業</button></td>
                         </tr>
                         <tr>
                             <td>宗教學系</td>
@@ -205,19 +194,96 @@
                             <td>0</td>
                             <td>0</td>
                             <td>2812</td>
-                            <td>
-                                <input type="radio" name="passStatus" value="yes">已通過<br>
-                                <input type="radio" name="passStatus" value="no">未通過
-                            </td>
-                            <td>
-                                <input type="checkbox" name="status[]" value="firstPass">初審<br>
-                                <input type="checkbox" name="status[]" value="paid">繳費<br>
-                                <input type="checkbox" name="status[]" value="check">核定
-                            </td>
-                            <td><button type="button" class="btn btn-primary">編輯</button></td>
+                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#checkCourse[0]">核定作業</button></td>
                         </tr>
                     </tbody>
                 </table>
+                <div class="modal fade" id="checkCourse[0]" tabindex="-1" role="dialog" aria-labelledby="checkCourseTitle[0]" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="checkCourseTitle[0]">殯藏文書(C900222450)核定作業</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="" method="post">
+                            <div class="modal-body">
+                                <div class="container">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>審查狀態</th>
+                                                <th>核定</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="radio" name="passStatus" value="yes">已通過<br>
+                                                        <input type="radio" name="passStatus" value="no">未通過
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" name="status[]" value="firstPass">初審<br>
+                                                        <input type="checkbox" name="status[]" value="paid">繳費<br>
+                                                        <input type="checkbox" name="status[]" value="check">核定
+                                                    </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                <button type="submit" class="btn btn-primary">編輯</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="checkCourse[1]" tabindex="-1" role="dialog" aria-labelledby="checkCourseTitle[1]" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="checkCourseTitle[1]">殯藏倫理(C900222567)核定作業</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="" method="post">
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <table class="table table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th>審查狀態</th>
+                                                <th>核定</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input type="radio" name="passStatus" value="yes">已通過<br>
+                                                    <input type="radio" name="passStatus" value="no">未通過
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" name="status[]" value="firstPass">初審<br>
+                                                    <input type="checkbox" name="status[]" value="paid">繳費<br>
+                                                    <input type="checkbox" name="status[]" value="check">核定
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                    <button type="submit" class="btn btn-primary">編輯</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
