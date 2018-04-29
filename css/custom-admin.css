@@ -1,36 +1,33 @@
 /*adminPanel.html*/
-.welcome{
-    text-align: center;
-    color: white;
-}
-
 table.cpanel{
-    width: 50%;
+    width: 75%;
     margin: 10px auto;
+    border: white 1px solid;
 }
 
 table.cpanel thead tr th{
-    padding: 10px 1px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 26px;
+    padding: 40px 1px;
     background: dodgerblue;
     color: white;
-    border: none;
     border-radius: 5px;
 }
 
 table.cpanel tbody tr td{
-    border: none;
     padding: 20px;
 }
 
 table.stuList{
-    width: auto;
+    width: 120%;
     margin: 0 auto;
 }
 
 table.stuList thead tr th{
     border: none;
     border-bottom: white solid 2px;
-    padding: 15px 5px;
+    padding: 20px 5px;
     background-color: dodgerblue;
     color: white;
     text-align: center;
@@ -46,32 +43,45 @@ table.stuList tbody tr td{
 
 /*adminCheck.html*/
 table.stuInfo{
-    width: 50%;
-    margin: 1px 12% 1px;
+    width: 100%;
+    margin: 30px auto 10px;
+    font-family: "Microsoft JhengHei UI";
 }
 
-table.stuInfo tr td {
-    padding: 10px 1px;
+table.stuInfo thead th{
+    background-color: #1d9b6c;
+    padding: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+table.stuInfo tbody td {
+    border: none;
+    border-bottom: grey solid 4px;
+    padding: 20px 0;
+    font-size: 20px;
 }
 
 table.chosenClassLst{
-    width: 85%;
-    margin: 10px auto 10px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 table.chosenClassLst thead tr th{
-    border: black solid 2px;
-    padding: 25px 1px;
+    border: none;
+    padding: 30px 0;
     background-color: dodgerblue;
     color: white;
 }
 
 table.chosenClassLst tbody tr td{
     text-align: center;
-    border: black dashed 2px;
+    border: none;
     padding: 25px 1px;
 }
 
-.btn-default, .btn-default:focus, .btn-default:hover{
+.btn{
     border-radius: 5px;
 }
+
